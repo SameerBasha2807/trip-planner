@@ -1,0 +1,93 @@
+research_task:
+  description: >
+    Research {destination} for a {days}-day trip with a budget of {budget} USD.
+    Cover:
+    - Top attractions
+    - Hidden gems
+    - Best neighbourhoods to stay
+    - Weather and best travel season
+    - Safety tips
+    - Local transport options
+    - Typical daily costs
+
+    Ensure the information is practical, realistic, and useful for planning.
+
+  expected_output: >
+    A structured research report for {destination} including:
+    - Attractions and hidden gems
+    - Recommended neighbourhoods
+    - Weather insights
+    - Safety considerations
+    - Transport options
+    - Estimated daily costs
+
+  agent: travel_researcher
+
+
+budget_task:
+  description: >
+    Using the research report, create a detailed budget for a {days}-day trip
+    to {destination} within {budget} USD.
+
+    Requirements:
+    - Break down costs per day
+    - Include categories:
+      accommodation, food, transport, activities, contingency
+    - Ensure the plan is realistic and achievable
+    - Highlight where to save money and where to spend more
+
+  expected_output: >
+    A clear day-by-day budget breakdown for {destination} including:
+    - Accommodation costs
+    - Food expenses
+    - Transport costs
+    - Activity costs
+    - Contingency buffer
+
+  agent: budget_planner
+
+
+itinerary_task:
+  description: >
+    Using the research report and budget plan, create a {days}-day itinerary
+    for {destination}.
+
+    Requirements:
+    - Label each day clearly (Day 1, Day 2, etc.)
+    - Include:
+      Morning, Afternoon, Evening plans
+    - Ensure all activities fit within the budget
+    - Use top attractions and logical travel routes
+    - Avoid unrealistic travel schedules
+
+  expected_output: >
+    A structured itinerary with:
+    - Day-by-day plan (Day 1 to Day {days})
+    - Morning, afternoon, evening sections
+    - Budget-aligned activities
+
+  agent: itinerary_generator
+
+
+local_task:
+  description: >
+    Enhance the itinerary using local expertise for {destination}.
+
+    Add:
+    - Hidden gems not commonly known
+    - Must-try local foods and restaurants
+    - Cultural customs and etiquette tips
+    - Transport hacks and cost-saving tips
+    - Neighborhood-specific advice
+
+    Ensure recommendations fit naturally into the itinerary.
+
+  expected_output: >
+    A local insider guide including:
+    - Hidden gems
+    - Food recommendations
+    - Cultural etiquette
+    - Transport hacks
+    - Neighborhood tips integrated with itinerary
+
+  agent: local_expert
